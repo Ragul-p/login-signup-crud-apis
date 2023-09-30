@@ -33,8 +33,6 @@ async function userVerify(req, res, next) {
 
 async function tokenVerify(req, res, next) {
     try {
-        // Example Token 
-        //Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZDM0NGVlN2U0NzUxMTQxNTlkMWM5ZiIsImlhdCI6MTY5MTU2NzM0MiwiZXhwIjoxNjkxODI2NTQyfQ.qkVAu2BWwu-mAp05GFv4zeyF6tjIa6FAAFuCawbWpD4
         var token;
         if (req.headers.authorization && req.headers.authorization.startsWith("Bearer")) {
             token = req.headers.authorization.split(" ")[1];
